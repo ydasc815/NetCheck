@@ -1,33 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NoNetworkPage">
+    tools:context=".NoNetworkPage"
+    android:background="@android:color/white">
+
 
     <LinearLayout
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/img"
             android:layout_width="match_parent"
-            android:layout_height="520dp"
-            android:src="@drawable/nonet" />
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/nonet12" />
 
-        <Button
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oh Shucks!"
+            android:textStyle="bold"
+            android:textSize="32dp"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:gravity="center_horizontal"
+            android:text="No internet connection.\n Check your settings and try again."
+            android:textSize="16dp" />
+
+        <android.support.v7.widget.CardView
             android:id="@+id/retry_network"
-            style="@style/Base.Widget.AppCompat.Button.Colored"
-            android:layout_width="250dp"
-            android:layout_height="70dp"
-            android:layout_centerHorizontal="true"
-            android:text="Retry"
-            android:textAllCaps="false"
-            android:textSize="23dp"
-            android:layout_gravity="center"/>
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="96dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center_horizontal"
+            app:cardBackgroundColor="#2185AB"
+            app:cardCornerRadius="6dp"
+            app:cardMaxElevation="6dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Retry"
+                android:textSize="20dp"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"/>
 
+        </android.support.v7.widget.CardView>
     </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>
